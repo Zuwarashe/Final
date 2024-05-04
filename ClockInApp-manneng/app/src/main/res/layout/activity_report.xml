@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/backgroundimage"
+    android:visibility="visible"
+    tools:context=".Report">
+    <!--Goal Setting heading-->
+    <TextView
+        android:id="@+id/Greeting"
+        android:layout_width="match_parent"
+        android:layout_height="71dp"
+        android:gravity="center"
+        android:text="Goal Setting"
+        android:textSize="25sp" />
+    <TextView
+        android:id="@+id/UserNameHeading"
+        android:layout_width="400dp"
+        android:layout_height="116dp"
+        android:layout_below="@+id/Greeting"
+        android:layout_marginTop="6dp"
+        android:gravity="center"
+        android:text="Strap on your work boots, it's time to climb!"
+        android:textSize="30sp"
+        android:textStyle="bold" />
+
+    <com.google.android.material.slider.Slider
+        android:contentDescription="Slider for selecting hours"
+        android:id="@+id/sliderhour"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginTop="187dp"
+        android:layout_marginBottom="415dp" />
+    <!--Goal set-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="448dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="-30dp"
+        android:orientation="vertical">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/todoListRecyclerView"
+        android:backgroundTint="@color/design_default_color_background"
+        />
+    </LinearLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/newTaskButton"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/bottomNavigationView"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="16dp"
+        android:text="New Goal"
+        android:backgroundTint="?attr/colorPrimary"
+        android:textColor="?colorOnPrimary" />
+
+
+
+
+
+    <!--Navigation-->
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/bottomNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        app:menu="@menu/botton_menu"
+        app:itemIconSize="25dp" />
+</RelativeLayout>
